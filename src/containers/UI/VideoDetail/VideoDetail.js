@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import styles from './VideoDetail.module.scss';
 import * as actions from '../../../store/actions/index';
-import Comments from '../Comments/comments';
+import Comments from '../../../components/UI/Comments/comments';
 
 class VideoDetail extends Component {
     state = {
@@ -47,7 +48,7 @@ class VideoDetail extends Component {
     }
 
     showSortPanelHandler = () => {
-        console.log('showSortPanelHandler');
+        //console.log('showSortPanelHandler');
         this.props.onShowSort();
     }
     switchSortHandler = (sort) => {
@@ -68,7 +69,7 @@ class VideoDetail extends Component {
     }
     
     render() {
-        console.log("video detail render");
+        //console.log("video detail render");
         
         const loader = <div></div>;
         
@@ -78,25 +79,27 @@ class VideoDetail extends Component {
         let publishDate =  new Date(this.props.selectedVideo.snippet.publishedAt);
         
         return (
-            <div className="video-detail" onScroll={() => this.onScrollHandler}>
-                <div className="video-detail__left">
-                    <div className="video-detail__channel-icon">
-                         <img src={this.props.selectedChannel.items[0].snippet.thumbnails.default.url} alt="icon" /> 
-                    </div>
-                </div>
-                <div className="video-detail__right">
-                    <div>
-                        <div className="video-detail__channel-bref">
-                            <div className="video-detail__channel-title">{this.props.selectedVideo.snippet.channelTitle}</div>
-                            <div className="video-detail__channel-time">Published on {publishDate.toDateString().substring(4, publishDate.toDateString().length)}</div>
+            <div className={styles.videoDetail} onScroll={() => this.onScrollHandler}>
+                <div className={styles.videoDetail__main}>
+                    <div className={styles.videoDetail__left}>
+                        <div className={styles.videoDetail__channel_icon}>
+                             <img src={this.props.selectedChannel.items[0].snippet.thumbnails.default.url} alt="icon" /> 
                         </div>
                     </div>
-                </div>
-                <div className="video-detail__content">
-                    {detail}
-                    <p className="video-detail__show" onClick={this.extendDetailHandler}>
-                        {this.state.extended ? <span>SHOW LESS</span>: <span>SHOW MORE</span>}
-                    </p>
+                    <div className={styles.videoDetail__right}>
+                        <div>
+                            <div className={styles.videoDetail__channel_bref}>
+                                <div className={styles.videoDetail__channel_title}>{this.props.selectedVideo.snippet.channelTitle}</div>
+                                <div className={styles.videoDetail__channel_time}>Published on {publishDate.toDateString().substring(4, publishDate.toDateString().length)}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.videoDetail__content}>
+                        {detail}
+                        <p className={styles.videoDetail__show} onClick={this.extendDetailHandler}>
+                            {this.state.extended ? <span>SHOW LESS</span>: <span>SHOW MORE</span>}
+                        </p>
+                    </div>
                 </div>
                 <Comments items={this.props.comments} 
                             total={this.props.selectedVideo.statistics.commentCount} 

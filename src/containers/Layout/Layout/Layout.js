@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import Header from '../Header/Header';
+import Header from '../../../components/Layout/Header/Header';
+import styles from './Layout.module.scss';
 
 class Layout extends Component {
     state = {
@@ -30,7 +31,7 @@ class Layout extends Component {
                     showSideDrawer={this.state.showSideDrawer}
                     closeSideDrawer={this.sideDrawerClosedHandler}
                   />
-                <div className="body-wrap">
+                <div className={styles.bodyWrap}>
                     <div className="container">
                         { this.props.children }
                     </div>

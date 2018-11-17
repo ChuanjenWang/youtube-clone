@@ -1,13 +1,14 @@
 import React from 'react';
 
-import '../../../App.css';
-import SearchBar from '../../UI/SearchBar/SearchBar';
+import styles from './Header.module.scss';
+import SearchBar from  '../../../containers/UI/SearchBar/SearchBar';
 import SideDrawer from '../Header/SideDrawer/SideDrawer';
 import ToggleMenu from '../../UI/ToggleMenu/ToggleMenu';
 
 const header = (props) => {
+    
     return (
-        <div className="header">
+        <div className={styles.header}>
             <ToggleMenu 
                 sideDrawerToggle={props.sideDrawerToggle} 
                 />

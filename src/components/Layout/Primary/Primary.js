@@ -1,14 +1,15 @@
 import React from 'react';
 
-import VideoPlayer from '../../UI/VideoPlayer/VideoPlayer';
-import VideoDetail from '../../UI/VideoDetail/VideoDetail';
+import styles from './Primary.module.scss';
+import VideoPlayer from '../../../containers/UI/VideoPlayer/VideoPlayer';
+
 
 const primary = ({video}) => {
-    console.log(video);
+    //console.log(video);
     return (
-        <div className="primary">
+        <div className={styles.primary}>
             <VideoPlayer video={video}></VideoPlayer>
-            <VideoDetail video={video}></VideoDetail>
+          
         </div>
     )
 }

@@ -1,0 +1,114 @@
+@import "../../../sass/abstracts/mixins";
+
+.comment {
+    margin-top: 20px;
+    //border-top: 1px solid #eee;
+
+    &__iconbox {
+      // display: inline-block;
+      float: left;
+      width: 64px;
+      // vertical-align: top;
+      @include clearfix;
+      
+      @include respond(tab-port) {
+        
+      }
+    }
+    &__icon {
+      margin-top: 10px;
+      background-color:#eee;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 70% 50%; 
+      border-radius: 100px;
+      width: 45px;
+      height: 45px;
+      overflow: hidden;
+
+      img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+    &__mainbox{
+      // display: inline-block;
+      // vertical-align: top;
+      width: 90%;
+      margin-left: 64px;
+      display: block;
+
+      @include respond(tab-port) {
+        
+      }
+    }
+    &__title{
+      padding-top: 12px;
+      font-weight: 600;
+    }
+    &__publish{
+      color: #808080;
+      padding-left: 10px;
+      font-size: 12px;
+    }
+    &__main {
+      padding-top: 7px;
+      
+      &_inner{
+        margin-right: 5px;
+      }
+
+      @include respond(tab-port) {
+        //font-size: 12px;
+        //padding-left: 5px;
+      }
+    }
+    &__social {
+      padding-top: 12px;
+      position: relative;
+      color: #777;
+
+   
+      @include respond(tab-port) {
+        padding-left: 5px;
+      }
+    }
+    &__count{
+      padding-right: 10px;
+
+      @include respond(tab-port) {
+         //font-size: 12px;
+     
+      }
+    }
+    &__reply{
+      display: inline-block;
+      padding-left: 7px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -1px;
+      cursor: pointer;
+
+      @include respond(tab-port) {
+        display: none;
+     }
+    }
+}
+
+.icon {
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: #909090;
+  margin-top: 0px;
+  padding-right: 10px;
+  cursor: pointer;
+  vertical-align: middle;
+
+  @include respond(tab-port) {
+    
+    margin-top: 0;
+  }
+}

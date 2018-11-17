@@ -2,7 +2,7 @@ import * as actionTypes from '../actions/actionTypes';
 import youtube from '../../utilities/youtube';
 
 export const fetchComments = (id, nextPage, sort) => {
-    console.log('action: fetchComments');
+    //console.log('action: fetchComments');
     
     return dispatch => {
         dispatch(fetchCommentsStart());
@@ -24,14 +24,14 @@ export const fetchComments = (id, nextPage, sort) => {
             }
         }
         youtube(params, (data) => {
-            console.log(data);
+            //console.log(data);
             dispatch(fetchCommentsDetailSuccess(data));
         });
     }
 }
 
 export const fetchCommentsByOrder = (id, order) => {
-    console.log('action fetchCommentsByOrder');
+    //console.log('action fetchCommentsByOrder');
     return dispatch => {
         dispatch(fetchCommentsByOrderStart());
         const params = {
@@ -50,20 +50,20 @@ export const fetchCommentsByOrder = (id, order) => {
 }
 
 export const fetchCommentsStart = () => {
-    console.log('action fetchCommentsStart');
+    //console.log('action fetchCommentsStart');
     return {
         type: actionTypes.FETCH_COMMENTS_START
     }   
 }
 export const fetchCommentsByOrderStart = () => {
-    console.log('action fetchCommentsByOrderStart');
+    //console.log('action fetchCommentsByOrderStart');
     return {
         type: actionTypes.FETCH_COMMENTS_ORDER_START
     }   
 }
 
 export const fetchCommentsDetailSuccess = (data) => {
-    console.log('action fetchCommentsDetailSuccess');
+    //console.log('action fetchCommentsDetailSuccess');
     //console.log('next page token?:' + data.nextPageToken);
     return {
         type: actionTypes.FETCH_COMMENTS_SUCCESS,

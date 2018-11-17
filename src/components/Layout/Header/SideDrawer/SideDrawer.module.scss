@@ -1,0 +1,23 @@
+.sideDrawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    z-index: 500;
+    background-color: #f5f5f5;
+    transition: all 0.3s ease;
+  }
+  
+  .sideDrawer__title {
+    border-bottom: 1px solid #eee;
+    height: 56px;
+  }
+  
+  .SideDrawerOpen {
+    transform: translateX(0);
+  }
+  
+  .SideDrawerClose {
+    transform: translateX(-100%);
+  }

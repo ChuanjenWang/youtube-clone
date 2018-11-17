@@ -1,0 +1,19 @@
+@import "../../../sass/abstracts/mixins";
+
+.primary {
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 24px 24px 24px 0;
+    //margin-left: 24px;
+    
+
+    @include respond(tab-land) {
+        width: 100%;
+        padding: 0;
+        display: block;
+        padding: 24px 0;
+        //margin-left: 0;
+        //order: 1;
+    }
+}

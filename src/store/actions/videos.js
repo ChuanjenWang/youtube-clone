@@ -7,7 +7,7 @@ import { fetchChannel } from './channels';
 import { clearComments } from './comments';
 
 export const searchStart = (term) => {
-    console.log('actions: searchStart');
+    //console.log('actions: searchStart');
     return {
         type: actionTypes.SEARCH_START,
         term: term
@@ -15,7 +15,7 @@ export const searchStart = (term) => {
 };
 
 export const fetchVideos = (term) => {
-    console.log('actions: fetchVideos');
+    //console.log('actions: fetchVideos');
     //console.log('term:' + term);
     return dispatch => {
         dispatch(fetchVideosStart());
@@ -30,14 +30,14 @@ export const fetchVideos = (term) => {
         }
 
         youtube(params, (data) => {
-            console.log(data);
+            //sconsole.log(data);
             dispatch(fetchVideosDetail(data.items));
         });
     };
 }
 
 export const fetchVideosDetail = (data) => {
-    console.log('actions: fetchVideosDetail');
+    //console.log('actions: fetchVideosDetail');
     const ids = data.map(video=> {
         return video.id.videoId;
     })
@@ -52,7 +52,7 @@ export const fetchVideosDetail = (data) => {
             }
         }
         youtube(params, (detail) => {     
-            console.log(detail);
+            //console.log(detail);
             dispatch(fetchVideosSuccess(detail.items));
             dispatch(fetchChannel(detail.items[0].snippet.channelId));
             dispatch(clearComments());
@@ -61,7 +61,7 @@ export const fetchVideosDetail = (data) => {
 }
 
 export const fetchVideosStart = () => {
-    console.log('actions: fetchVideosStart')
+    //console.log('actions: fetchVideosStart')
     return {
         type: actionTypes.FETCH_VIDEOS_START,
         loading: true
@@ -69,7 +69,7 @@ export const fetchVideosStart = () => {
 }
 
 export const fetchVideosSuccess = (fetchedVideos) => {
-    console.log('actions: fetchVideosSuccess')
+    //console.log('actions: fetchVideosSuccess')
     return {
         type: actionTypes.FETCH_VIDEOS_SUCCESS,
         videos: fetchedVideos
@@ -77,7 +77,7 @@ export const fetchVideosSuccess = (fetchedVideos) => {
 }
 
 export const selectVideo = (selectedVideo) => {
-    console.log('actions: selectVideo')
+    //console.log('actions: selectVideo')
     return dispatch => {
         dispatch(selectVideoSuccess(selectedVideo));
         dispatch(fetchChannel(selectedVideo.snippet.channelId));
@@ -86,7 +86,7 @@ export const selectVideo = (selectedVideo) => {
 }
 
 export const selectVideoSuccess = (selectedVideo) => {
-    console.log('actions: selectVideoSuccess')
+    //console.log('actions: selectVideoSuccess')
     return {
         type: actionTypes.SELECT_VIDEO_SUCCESS,
         selectedVideo: selectedVideo
@@ -94,7 +94,7 @@ export const selectVideoSuccess = (selectedVideo) => {
 }
 
 export const extendDetail = () => {
-    console.log('actions: extendDetail')
+    //console.log('actions: extendDetail')
     return {
         type: actionTypes.EXTEND_DETAIL,
     }

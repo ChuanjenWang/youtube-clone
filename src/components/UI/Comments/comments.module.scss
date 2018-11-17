@@ -1,0 +1,103 @@
+@import "../../../sass/abstracts/mixins";
+/* Comments */
+.comments {
+    border-top: 1px solid #f0f0f0;
+    position: relative;
+
+    &__info {
+      margin-top: 15px;
+      font-size: 15px;
+      font-weight: 500;
+      position: relative;
+      @include respond(tab-land) {
+        font-size: 20px;
+      }
+    }
+    &__sortPanel {
+      z-index: 200;
+      box-shadow: 0px 1px 3px 0px #BFBFBF;
+      width: 128px;
+      font-weight: 400;
+      font-size: 14px;
+      position: absolute;
+      left: 155px;
+      top: 35px;
+      display: block;
+      background-color: #fff;
+    }
+    &__word {
+      &_m{
+        display: none;
+        @include respond(tab-land) {
+          display: inline-block;
+          
+        }
+      }
+      &_d{
+        display: inline-block;
+        
+        @include respond(tab-land) {
+          display: none;
+        }
+      }
+
+    }
+  }
+  
+  .comments__sortPanel ul{
+    list-style: none;
+    padding: 10px 0;
+    margin: 0 auto;
+  }
+  .comments__sortPanel ul li{
+    height: 48px;
+    padding: 0 16px;
+    vertical-align: middle;
+  }
+  .comments__sortPanel ul li span{
+    height: 48px;
+    width: 100%;
+    display: block;
+    padding-top: 14px;
+    cursor: pointer;
+  }
+  .comments__sortPanel ul li:hover{
+    background-color: #f0f0f0;
+  }
+  .comments__sort {
+    padding-left: 50px;
+    color: #777;
+    font-weight: 600;
+    letter-spacing: -1px;
+    cursor: pointer;
+  
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+  .comments__sort ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .comments__sort ul li{
+    list-style: none;
+    display: inline;
+    padding-right: 10px;
+  }
+  .comments__sort .icon {
+    width: 18px;
+    height: 18px;
+  }
+  .comments__sort__text {
+    margin-top: 6px;
+  }
+
+
+.close {
+  display: none;
+}
+
+  
+  

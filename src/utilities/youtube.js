@@ -32,7 +32,6 @@ function start(p, callback) {
     });
 };
 
-
 const youtube = (params, callback) =>{
     gapi.load('client', () => start(params, callback));   
 }

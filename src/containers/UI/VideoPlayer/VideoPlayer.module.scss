@@ -1,0 +1,207 @@
+@import "../../../sass/abstracts/mixins";
+
+.videoPlayer {
+    width: 100%;
+
+    &__Loading {
+      width: 100%;
+      background-color: #f0f0f0;
+    }
+
+    &__title {
+      margin-top: 20px; 
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+
+      &__loading {
+        background-color: #f0f0f0;
+        height: 24px;
+        max-width: 400px;
+        margin-top: 20px; 
+      }
+    }
+
+    &__info {
+      border-bottom: 1px solid #f0f0f0;
+      padding-bottom: 20px;
+
+      &__loading {
+        background-color: #f0f0f0;
+        height: 18px;
+        max-width: 200px;
+        margin-top: 7px;
+        vertical-align: top;
+        display: inline-block;
+      }
+    }
+
+    &__channelTitle {
+      display: none;
+      
+      @include respond(tab-land){
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+
+    &__views {
+      margin-top: 7px;
+      color: #777;
+      display: inline-block;
+      vertical-align: top;
+      width: 200px;
+      font-size: 16px;
+
+      @include respond(tab-land){
+        margin-top: 3px;
+        margin-left: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #767676;
+        width: 100px;
+        white-space: nowrap;
+      }
+      &__loading {
+        margin-top: 7px;
+        display: inline-block;
+        vertical-align: top;
+        width: 200px;
+        background: #f0f0f0;
+      }
+    }
+
+    &__social {
+      vertical-align: top;
+      text-align: left;
+      font-weight: 700;
+      font-size: 14px;
+      color: #777;
+      float: right;
+      overflow: auto;
+      
+      @include respond(tab-land) {
+        float: none;
+      }
+
+      &::after{
+        content: "";
+        clear: both;
+        display: table;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        margin-top: 10px;
+        list-style: none;
+        li {
+          display: inline-block;
+          vertical-align: top;
+          cursor: pointer;
+          position: relative;
+
+          &:not(:last-child){
+            padding-right: 20px;
+          }
+        }
+        @include respond(tab-land) {
+          display: flex;
+          justify-content: flex-start;
+        } 
+      }
+
+      &__words {
+        margin-left: 8px;
+        vertical-align: top;
+        top: 0;
+        position: relative;
+
+        @include respond(tab-land) {
+          margin-left: 5px;
+          font-size: 12px;
+          font-weight: 500;
+        }
+
+        &_share {
+          @include respond(tab-land) {
+            display: none;
+          }
+        }
+        &_add {
+          @include respond(tab-land) {
+            display: none;
+          }
+        }
+      }
+      &_like {
+        padding-bottom: 12px;
+        border-bottom: 2px solid #777; 
+
+        @include respond(tab-land) {
+          padding: 0;
+          border: none;
+        }
+      } 
+      &_dislike{
+        padding-bottom: 12px;
+        border-bottom: 2px solid #777; 
+
+        @include respond(tab-land) {
+          padding: 0;
+          border: none;
+          margin-right: auto;
+        }
+      }
+    }
+}
+  
+  .embedResponsive {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    max-width: 100%;
+    margin: 0 auto;
+    
+    &__loading {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+      max-width: 100%;
+      margin: 0 auto;
+      background-color: #f0f0f0;
+    }
+        
+  }
+
+  .embedResponsiveContainer{
+    @include respond(tab-land) {
+      max-width: 748px !important;
+      max-height: 482px !important;
+      margin: 0 auto;
+    }
+  }
+  
+  .embedResponsive__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+
+  .icon {
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: #909090;
+    top: 15px;
+
+    @include respond(tab-land){
+      width: 1.2em;
+      height: 1.2em;
+    }
+  }

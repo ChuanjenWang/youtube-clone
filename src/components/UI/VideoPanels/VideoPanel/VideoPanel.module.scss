@@ -1,0 +1,130 @@
+@import "../../../../sass/abstracts/mixins";
+
+/* Video Panel */
+.videoPanel {
+    height: 94px;
+    width: 100%; 
+    margin: 0 0 8px 0;
+    cursor: pointer;
+
+    &__left {
+      width: 168px;
+      vertical-align: top;
+      float: left;
+      position: relative;
+
+
+      &__loading {
+        width: 168px;
+        vertical-align: top;
+        position: relative;
+        float: left;
+      }
+    }
+
+    &__right {
+      display: block;
+      margin-left: 168px;
+      max-width: 400px;
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 16px;
+      padding-left: 5px;
+
+      &__loading {
+        display: inline-block;
+        width: calc(100%-180px);
+        vertical-align: top;
+        font-size: 14px;
+        
+        line-height: 16px;
+        padding-left: 5px;
+      }
+      // @include respond(tab-port) {
+      //   max-width: calc(100%-180px);
+      // }
+    }
+
+    &__title {
+      font-weight: 500;
+      width: calc(100%-200px);
+    }
+  }
+
+  .videoPanel__duration{
+    position: absolute;
+    right: 5px;
+    bottom: 8px;
+    z-index: 100;
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    line-height: 12px;
+    border-radius: 2px;
+    padding: 3px 3px;
+  }
+ 
+
+  .videoPanel__title__loading {
+    height: 20px;
+    max-width: 180px;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden; 
+  }  
+  .videoPanel__title__loading::after {
+    content: "";  
+    position: absolute; 
+    top: 0;
+    left: 0;
+    height: 20px;
+    max-width: 300px;
+    background: #f0f0f0;
+    background: linear-gradient(to right,#eeeeee 8%, #dddddd 58%, #eeeeee 18%); 
+    transform: translateX(0); 
+    animation: loadingBox 2.5s infinite;   
+  }
+  .videoPanel__channel__loading {
+    height: 18px;
+    max-width: 100px;
+    background-color: #f0f0f0;
+    margin-top: 5px;
+    position: relative;
+    overflow: hidden; 
+  }
+  .videoPanel__channel__loading::after {
+    content: "";  
+    position: absolute; 
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 300px;
+    background: #f0f0f0;
+    background: linear-gradient(to right,#eeeeee 8%, #dddddd 58%, #eeeeee 18%); 
+    transform: translateX(0); 
+    animation: loadingBox 2.5s infinite;   
+  } 
+  
+  .videoPanel__left img {
+    width: 168px;
+    height: 94px;
+  }
+  .videoPanel__left__img__loading {
+    width: 168px;
+    height: 94px;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden; 
+  }
+  
+  @keyframes loadingBox {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(300px);
+    }
+  }
+    

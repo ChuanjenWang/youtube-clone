@@ -2,7 +2,7 @@ import * as actionTypes from './actionTypes';
 import youtube from '../../utilities/youtube';
 
 export const fetchChannel = (id) => {
-    console.log('action: fetchChannel');
+    //console.log('action: fetchChannel');
     return dispatch => {
         
         const params = {
@@ -14,14 +14,14 @@ export const fetchChannel = (id) => {
         }
 
         youtube(params, (data) => {
-            console.log(data);
+            //console.log(data);
             dispatch(fetchChannelSuccess(data));
         });
     }   
 }
 
 export const fetchChannelSuccess = (data) => {
-    console.log('action: fetchChannelSuccess');
+    //console.log('action: fetchChannelSuccess');
     return {
         type: actionTypes.FETCH_CHANEEL_SUCCESS,
         selectedChannel: data

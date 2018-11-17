@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import VideoPanel from './VideoPanel/VideoPanel';
-import * as actions from '../../../store/actions/index';
+import VideoPanel from '../../../components/UI/VideoPanels/VideoPanel/VideoPanel';
+import * as actions from '../../../store/actions';
 
 class VideoPanels extends Component {
     
     componentDidMount () {
-        console.log('VideoPanels componentDidMount');
+        //console.log('VideoPanels componentDidMount');
         this.props.onFetchVideos(this.props.term);
     }
 
@@ -20,7 +20,7 @@ class VideoPanels extends Component {
         let loader = [];
         
         for(let i=0; i<10; i++) {
-            loader.push(<VideoPanel video={null} selected={null} />)
+            loader.push(<VideoPanel video={null} selected={null} key={i} />)
         }
     
         if(this.props.videos) {

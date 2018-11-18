@@ -1,13 +1,13 @@
 {
-  "main.css": "/youtube-clone/static/css/main.d486d0d3.chunk.css",
-  "main.js": "/youtube-clone/static/js/main.8f381b8a.chunk.js",
-  "main.js.map": "/youtube-clone/static/js/main.8f381b8a.chunk.js.map",
+  "main.css": "/youtube-clone/static/css/main.ea140c28.chunk.css",
+  "main.js": "/youtube-clone/static/js/main.ee08bdfd.chunk.js",
+  "main.js.map": "/youtube-clone/static/js/main.ee08bdfd.chunk.js.map",
   "static/js/1.0bf4eb03.chunk.js": "/youtube-clone/static/js/1.0bf4eb03.chunk.js",
   "static/js/1.0bf4eb03.chunk.js.map": "/youtube-clone/static/js/1.0bf4eb03.chunk.js.map",
   "runtime~main.js": "/youtube-clone/static/js/runtime~main.dcc2e6b6.js",
   "runtime~main.js.map": "/youtube-clone/static/js/runtime~main.dcc2e6b6.js.map",
-  "static/css/main.d486d0d3.chunk.css.map": "/youtube-clone/static/css/main.d486d0d3.chunk.css.map",
+  "static/css/main.ea140c28.chunk.css.map": "/youtube-clone/static/css/main.ea140c28.chunk.css.map",
   "index.html": "/youtube-clone/index.html",
-  "precache-manifest.add0dfc442d425250a15a25702641f52.js": "/youtube-clone/precache-manifest.add0dfc442d425250a15a25702641f52.js",
+  "precache-manifest.043c9adf5c01a87461047b4b0a754cfa.js": "/youtube-clone/precache-manifest.043c9adf5c01a87461047b4b0a754cfa.js",
   "service-worker.js": "/youtube-clone/service-worker.js"
 }

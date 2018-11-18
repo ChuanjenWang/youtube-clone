@@ -2,6 +2,7 @@
 
 .comment {
     margin-top: 20px;
+    width: 95%;
     //border-top: 1px solid #eee;
 
     &__iconbox {
@@ -53,15 +54,17 @@
     }
     &__main {
       padding-top: 7px;
+      width: 93%;
       
-      &_inner{
-        margin-right: 5px;
-      }
+    
 
       @include respond(tab-port) {
         //font-size: 12px;
         //padding-left: 5px;
       }
+    }
+    &_inner{
+      margin-right: 5px;
     }
     &__social {
       padding-top: 12px;

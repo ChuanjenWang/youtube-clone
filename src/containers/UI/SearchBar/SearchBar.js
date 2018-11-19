@@ -12,6 +12,7 @@ class SearchBar extends Component {
         //this.setState({term: event.target.value});
         const searchTerm = event.target.value;
         this.props.onSearchStart(searchTerm);
+
     }
 
     searchClickedHandler = (event) => {

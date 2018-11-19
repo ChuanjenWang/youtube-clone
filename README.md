@@ -2,6 +2,7 @@
 Demo: [https://chuanjenwang.github.io/youtube-clone/](https://chuanjenwang.github.io/youtube-clone/)
 
 This project was built with [React](https://github.com/facebook/react) and [Youtube Data Api v3](https://developers.google.com/youtube/v3/).<br>
+<br>
 Let me know what you think! :)
 
 ## Features

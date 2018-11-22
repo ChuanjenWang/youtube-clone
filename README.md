@@ -7,7 +7,7 @@ Let me know what you think! :)
 
 ## Features
 
-- Search for Youyube videos with keywords.
+- Search for Youtube videos with automatic suggestion keyword.
 - Display top related video and its information.
 - Display associated video list.
 - Infinite scroll and fetch user comments.

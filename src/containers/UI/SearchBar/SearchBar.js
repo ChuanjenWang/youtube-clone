@@ -4,6 +4,7 @@ import ReactAutocomplete from 'react-autocomplete';
 
 import styles from './SearchBar.module.scss';
 import * as actions from '../../../store/actions/index';
+import { backTop } from '../../../utilities/tools';
 // import SearchSuggestions from './SearchSuggestions/SearchSuggestions';
 
 class SearchBar extends Component {
@@ -23,6 +24,7 @@ class SearchBar extends Component {
     searchClickedHandler = (event) => {
         event.preventDefault();
         this.props.onFetchVideos(this.props.term);
+        backTop();
     }
 
     searchKeyPressHandler = (event) => {
@@ -30,6 +32,7 @@ class SearchBar extends Component {
         {
             //this.props.searchTermChange(this.state.term);
             this.props.onFetchVideos(this.props.term);
+            backTop();
         }
     }
 
@@ -37,13 +40,11 @@ class SearchBar extends Component {
         this.setState({ value: e.target.value });
         this.props.onSearchStart(e.target.value);
         this.props.onFetchSuggestions(e.target.value);
-        //console.log(e.target.value);
     }
     selectSuggetionHandler = (value) => {
         this.setState({ value: value });
         this.props.onFetchVideos(this.props.term);
-        //this.props.onSearchStart(value);
-        //this.props.onFetchSuggestions(value);
+        backTop();
     }
 
     render() {
@@ -57,9 +58,9 @@ class SearchBar extends Component {
             width: '40%',
             display: 'inline-block'
         };
-        const menuStyle = {
-            marginTop: '12px'
-        }
+        // const menuStyle = {
+        //     marginTop: '12px'
+        // }
         const data = this.props.suggestions ? 
                      this.props.suggestions.map((suggestion) => ({ id: suggestion, label: suggestion})) 
                      : {id: '', label: ''}
@@ -87,7 +88,7 @@ class SearchBar extends Component {
                               }
                               inputProps={InputProps}
                               wrapperStyle={wrapperStyle}
-                              menuStyle={menuStyle}
+                            //   menuStyle={menuStyle}
                               value={this.state.value}
                               onChange={e => this.inputChangedHandler(e)}
                               onSelect={value => this.selectSuggetionHandler(value)}

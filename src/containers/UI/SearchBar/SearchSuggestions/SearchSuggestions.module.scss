@@ -1,0 +1,32 @@
+.searchSuggestions {
+    width: calc(45% + 65px);
+    margin-top: 12px;
+    background-color: #fff;
+    // border: 1px solid #f8f8f8;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    box-shadow: 0px 2px 4px 0px #A0A0A0;
+    
+    ul {
+      list-style: none;
+      widows: 100%;
+      text-align: left;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      
+      li {
+        height: 32px;
+        padding-left: 9px;
+        line-height: 32px;
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+    }
+  }
+
+  .close {
+    display: none;
+  }

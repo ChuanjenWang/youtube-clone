@@ -1,5 +1,12 @@
 export {
     searchStart,
+    fetchSuggestions,
+    closeSuggestions,
+    inSuggestions,
+    outSuggestions
+} from './search';
+
+export {
     fetchVideos,
     selectVideo,
     extendDetail

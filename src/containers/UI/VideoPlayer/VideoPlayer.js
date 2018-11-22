@@ -20,7 +20,7 @@ class videoPlayer extends Component {
         }
         
         const videoId = this.props.selectedVideo.id;
-        const url = `https://www.youtube.com/embed/${videoId}`;
+        const url = `https://www.youtube.com/embed/${videoId}?autoplay=0&enablejsapi=1`;
         const viewsCount = formatNumberHandler(this.props.selectedVideo.statistics.viewCount);
         const likeCount = numnerShortHandler(this.props.selectedVideo.statistics.likeCount);
         const disLikeCount = numnerShortHandler(this.props.selectedVideo.statistics.dislikeCount);

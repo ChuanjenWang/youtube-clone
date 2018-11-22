@@ -1,18 +1,11 @@
 //import axios from 'axios';
 //import YTSearch from 'youtube-api-search';
-
-import * as actionTypes from './actionTypes';
 import youtube from '../../utilities/youtube';
 import { fetchChannel } from './channels';
 import { clearComments } from './comments';
 
-export const searchStart = (term) => {
-    //console.log('actions: searchStart');
-    return {
-        type: actionTypes.SEARCH_START,
-        term: term
-    };
-};
+import * as actionTypes from './actionTypes';
+
 
 export const fetchVideos = (term) => {
     //console.log('actions: fetchVideos');

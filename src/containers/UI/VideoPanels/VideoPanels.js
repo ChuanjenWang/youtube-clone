@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import VideoPanel from '../../../components/UI/VideoPanels/VideoPanel/VideoPanel';
 import * as actions from '../../../store/actions';
+import { backTop } from '../../../utilities/tools';
 
 class VideoPanels extends Component {
     
@@ -13,6 +14,7 @@ class VideoPanels extends Component {
 
     selectVideoHandler = (video) => {
         this.props.onSelectVideo(video);
+        backTop();
     }
 
     render() {

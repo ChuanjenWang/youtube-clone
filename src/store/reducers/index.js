@@ -2,13 +2,14 @@ import { combineReducers } from 'redux';
 
 import videosReducer from '../reducers/videos';
 import channelsReducer from '../reducers/channels';
-import commentsResucer from '../reducers/comments';
-
+import commentsReducer from '../reducers/comments';
+import searchReducer from '../reducers/search';
 
 const rootReducer = combineReducers({
     videos: videosReducer,
     channels: channelsReducer,
-    comments: commentsResucer
+    comments: commentsReducer,
+    search: searchReducer
 })
 
 export default rootReducer

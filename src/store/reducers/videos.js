@@ -1,8 +1,10 @@
 import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
-    term: 'meal prep',
+    suggestions: [],
     viedos: [],
+    fetchingSuggestions: false,
+    showSuggestions: false,
     selectedVideo: null,
     extend: false,
     loading: false,
@@ -12,11 +14,6 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch(action.type)
     {
-        case actionTypes.SEARCH_START:
-            return {
-                ...state,
-                term: action.term
-            };
         case actionTypes.FETCH_VIDEOS:
             return {
                 ...state,
